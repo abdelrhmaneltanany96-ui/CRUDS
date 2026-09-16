@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="shortcut icon" href="imgs/crud.webp" type="image/x-icon" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-white">
+
+
+    <div class="container w-75 p-5">
+        <div class="">
+            <div class="form-group m-3">
+                <label for="productNameInput">product name :</label>
+                <input id="productNameInput" type="text" class="form-control">
+                <!-- form-control class in BS making input&its label in good form -->
+            </div>
+            <div class="form-group m-3">
+                <label for="productPriceInput">product price :</label>
+                <input id="productPriceInput" type="number" class="form-control">
+            </div>
+            <div class="form-group m-3">
+                <label for="productCategoryInput">product category :</label>
+                <input id="productCategoryInput" type="text" class="form-control">
+            </div>
+            <div class="form-group m-3">
+                <label for="productDescriptionInput">product description :</label>
+                <textarea id="productDescriptionInput" rows="5" class="form-control"></textarea>
+            </div>
+            <button id="AddButton" onclick="addProduct()" class="btn btn-info m-3">Add Product</button>
+        </div>
+
+
+
+        <input onkeyup="searchData(this.value)" id="searshInput" type="text" class="form-control mt-5 w-50 mx-auto" placeholder="Search By Product Name">
+
+
+
+        <div class="mt-5">
+            <table class="table table-dark">
+                <thead>
+                    <th>Index</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Category</th>
+                    <th>Product Description</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+
+
+
+    </div>
+
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
