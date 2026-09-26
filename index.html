@@ -15,6 +15,10 @@
     <div class="container w-75 p-5">
         <div class="">
             <div class="form-group m-3">
+                <label for="productImageInput">product image :</label>
+                <input onchange="getProductImage()" id="productImageInput" type="file" accept="image/*" class="form-control">
+            </div>
+            <div class="form-group m-3">
                 <label for="productNameInput">product name :</label>
                 <input id="productNameInput" type="text" class="form-control">
                 <!-- form-control class in BS making input&its label in good form -->
@@ -44,6 +48,7 @@
             <table class="table table-dark">
                 <thead>
                     <th>Index</th>
+                    <th>Product Image</th>
                     <th>Product Name</th>
                     <th>Product Price</th>
                     <th>Product Category</th>
