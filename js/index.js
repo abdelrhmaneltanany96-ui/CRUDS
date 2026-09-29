@@ -11,7 +11,7 @@ if (localStorage.product != null) {
     var productsArray = JSON.parse(localStorage.product)
 }
 else {
-    var ProductsArray = [];
+    var productsArray = [];
 }
 
 function addProduct() {
