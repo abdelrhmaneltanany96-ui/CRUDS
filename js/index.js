@@ -7,11 +7,10 @@ var mood = 'create';
 var temp;
 var productImage;
 
-if (localStorage.product != null) {
-    var productsArray = JSON.parse(localStorage.product)
-}
-else {
-    var productsArray = [];
+
+var productsArray = [];
+if (localStorage.items != null) {
+    var productsArray = JSON.parse(localStorage.items)
 }
 
 function addProduct() {
@@ -34,7 +33,7 @@ function addProduct() {
             AddButton.innerHTML = 'Add Product';
         }
     }
-    localStorage.setItem('product', JSON.stringify(productsArray))
+    localStorage.setItem('items', JSON.stringify(productsArray))
     showData()
     clearInputs()
 }
@@ -87,7 +86,7 @@ function showData() {
 
 function deleteItem(i) {
     productsArray.splice(i, 1)
-    localStorage.setItem('product', JSON.stringify(productsArray))
+    localStorage.setItem('items', JSON.stringify(productsArray))
     showData()
 }
 
